@@ -11,7 +11,7 @@ function setLocation(){
     getLatLon(searchField.value);
 }
 async function getLatLon(city){
-    const locationResponse = await fetch('http://api.openweathermap.org/geo/1.0/direct?q='+city+'&limit=5&appid=6e298e36e5d5dd5865e054bbe4731ec6');
+    const locationResponse = await fetch('https://api.codetabs.com/v1/proxy?quest=http://api.openweathermap.org/geo/1.0/direct?q='+city+'&limit=5&appid=6e298e36e5d5dd5865e054bbe4731ec6');
     const location = await locationResponse.json();
 
     setLocationText(location);
