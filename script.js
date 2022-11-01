@@ -26,7 +26,6 @@ async function getWeather(location){
 }
 function setBackgroundColor(weather){
     let main = document.getElementById('main');
-    let icon = document.getElementById('icon');
     let apiIcon = document.getElementById('apiIcon')
     //http://openweathermap.org/img/wn/10d@2x.png
     //https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2
@@ -34,18 +33,12 @@ function setBackgroundColor(weather){
 
     if (weather.weather[0].main == "Clouds"){
         main.style.backgroundColor = 'gray';
-        icon.innerText = 'Cloudy';
-
     }
     if (weather.weather[0].main == "Rain"){
         main.style.backgroundColor = 'lightblue';
-        icon.innerText = 'Rainy';
-
     }
     if (weather.weather[0].main == "Clear"){
         main.style.backgroundColor = 'lightyellow';
-        icon.innerText = 'Sunny';
-
     }
 }
 function setLocationText(location){
